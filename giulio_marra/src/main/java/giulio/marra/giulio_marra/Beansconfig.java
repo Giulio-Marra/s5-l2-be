@@ -3,8 +3,9 @@ package giulio.marra.giulio_marra;
 
 import giulio.marra.giulio_marra.entities.Bevande;
 import giulio.marra.giulio_marra.entities.Ingredienti;
-import giulio.marra.giulio_marra.entities.Menu;
 import giulio.marra.giulio_marra.entities.Pizze;
+import giulio.marra.giulio_marra.entities.Tavoli;
+import giulio.marra.giulio_marra.enums.StatoTavolo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -80,34 +81,29 @@ public class Beansconfig {
         return new Bevande(2.00, "sprite");
     }
 
-    public List<Pizze> tutteLePizze() {
-        List<Pizze> pizze = new ArrayList<>();
-        pizze.add(margherita());
-        pizze.add(funghiPizza());
-        pizze.add(prosciuttoPizza());
-        return pizze;
-    }
-
-    public List<Bevande> tutteLeBevande() {
-        List<Bevande> bevande = new ArrayList<>();
-        bevande.add(sprite());
-        bevande.add(acqua());
-        bevande.add(coca());
-        return bevande;
-    }
-
-    public List<Ingredienti> tuttiGliIngredienti() {
-        List<Ingredienti> ingredienti = new ArrayList<>();
-        ingredienti.add(funghi());
-        ingredienti.add(prosciutto());
-        ingredienti.add(ananas());
-        return ingredienti;
+    @Bean
+    public Tavoli tavolo1() {
+        return new Tavoli(1, 10, StatoTavolo.LIBERO);
     }
 
     @Bean
-    public Menu menu(List<Pizze> tutteLePizze, List<Bevande> tutteLeBevande, List<Ingredienti> tuttiGliIngredienti) {
-        return new Menu(tutteLePizze, tutteLeBevande, tuttiGliIngredienti);
+    public Tavoli tavolo2() {
+        return new Tavoli(2, 8, StatoTavolo.OCCUPATO);
     }
 
+    @Bean
+    public Tavoli tavolo3() {
+        return new Tavoli(3, 4, StatoTavolo.LIBERO);
+    }
+
+    @Bean
+    public Tavoli tavolo4() {
+        return new Tavoli(4, 2, StatoTavolo.LIBERO);
+    }
+
+    @Bean
+    public Tavoli tavolo5() {
+        return new Tavoli(5, 4, StatoTavolo.OCCUPATO);
+    }
 
 }

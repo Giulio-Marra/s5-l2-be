@@ -16,5 +16,4 @@ public class GiulioMarraApplication {
         Menu menu = ctx.getBean(Menu.class);
         menu.stampaMenu();
     }
-
 }

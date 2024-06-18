@@ -1,6 +1,5 @@
 package giulio.marra.giulio_marra;
 
-import giulio.marra.giulio_marra.entities.Menu;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,7 +12,6 @@ public class GiulioMarraApplication {
 
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(GiulioMarraApplication.class);
 
-        Menu menu = ctx.getBean(Menu.class);
-        menu.stampaMenu();
+
     }
 }

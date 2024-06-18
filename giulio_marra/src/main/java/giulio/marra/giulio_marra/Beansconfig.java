@@ -8,12 +8,14 @@ import giulio.marra.giulio_marra.entities.Tavoli;
 import giulio.marra.giulio_marra.enums.StatoTavolo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Configuration
+@PropertySource("application.properties")
 public class Beansconfig {
 
     @Bean

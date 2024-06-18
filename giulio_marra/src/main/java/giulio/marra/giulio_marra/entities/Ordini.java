@@ -1,7 +1,6 @@
 package giulio.marra.giulio_marra.entities;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -15,10 +14,27 @@ public class Ordini {
     private List<Bevande> bevandeOrdinate;
     private List<Ingredienti> ingredientiOrdinati;
 
-    public Ordini() {
-        this.pizzeOrdinate = new ArrayList<>();
-        this.bevandeOrdinate = new ArrayList<>();
-        this.ingredientiOrdinati = new ArrayList<>();
+    public Ordini(int numeroOrdine, int numeroCoperti, Tavoli tavolo, LocalDate dataAcquisizione, List<Pizze> pizzeOrdinate, List<Bevande> bevandeOrdinate, List<Ingredienti> ingredientiOrdinati) {
+        this.numeroOrdine = numeroOrdine;
+        this.numeroCoperti = numeroCoperti;
+        this.tavolo = tavolo;
+        this.dataAcquisizione = dataAcquisizione;
+        this.pizzeOrdinate = pizzeOrdinate;
+        this.bevandeOrdinate = bevandeOrdinate;
+        this.ingredientiOrdinati = ingredientiOrdinati;
+    }
+
+    public void stampaOrdine() {
+        System.out.println("Ordine:");
+        System.out.println("Pizze ordinate:");
+        for (Pizze pizza : pizzeOrdinate) {
+            System.out.println(pizza);
+        }
+        System.out.println("Bevande ordinate:");
+        for (Bevande bevanda : bevandeOrdinate) {
+            System.out.println(bevanda);
+        }
+
     }
 
 

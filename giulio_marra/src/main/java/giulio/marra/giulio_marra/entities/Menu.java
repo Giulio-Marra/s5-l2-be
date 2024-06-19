@@ -14,6 +14,30 @@ public class Menu {
     private List<Bevande> bevande;
     private List<Ingredienti> ingredienti;
 
+    public List<Pizze> getPizze() {
+        return pizze;
+    }
+
+    public void setPizze(List<Pizze> pizze) {
+        this.pizze = pizze;
+    }
+
+    public List<Bevande> getBevande() {
+        return bevande;
+    }
+
+    public void setBevande(List<Bevande> bevande) {
+        this.bevande = bevande;
+    }
+
+    public List<Ingredienti> getIngredienti() {
+        return ingredienti;
+    }
+
+    public void setIngredienti(List<Ingredienti> ingredienti) {
+        this.ingredienti = ingredienti;
+    }
+
     public void stampaMenu() {
         System.out.println("Menu Pizze:");
         for (Pizze pizza : pizze) {

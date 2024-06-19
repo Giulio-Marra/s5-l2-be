@@ -6,6 +6,7 @@ import giulio.marra.giulio_marra.entities.Ingredienti;
 import giulio.marra.giulio_marra.entities.Pizze;
 import giulio.marra.giulio_marra.entities.Tavoli;
 import giulio.marra.giulio_marra.enums.StatoTavolo;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -106,6 +107,11 @@ public class Beansconfig {
     @Bean
     public Tavoli tavolo5() {
         return new Tavoli(5, 4, StatoTavolo.OCCUPATO);
+    }
+
+    @Bean
+    public double coperto(@Value("${coperto.costo}") String copertoPersona) {
+        return Double.parseDouble(copertoPersona);
     }
 
 }

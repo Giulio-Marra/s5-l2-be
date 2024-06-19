@@ -12,6 +12,5 @@ public class GiulioMarraApplication {
 
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(GiulioMarraApplication.class);
 
-
     }
 }

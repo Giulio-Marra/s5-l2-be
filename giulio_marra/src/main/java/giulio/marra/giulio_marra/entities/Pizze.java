@@ -6,12 +6,12 @@ import java.util.List;
 public class Pizze {
     private String nome;
     private double prezzoBase;
-    private List<Ingredienti> ingredientiAggiuntivi = new ArrayList<>();
+    private List<Ingredienti> ingredienti = new ArrayList<>();
 
-    public Pizze(String nome, double prezzoBase, List<Ingredienti> ingredientiAggiuntivi) {
+    public Pizze(String nome, double prezzoBase, List<Ingredienti> ingredienti) {
         this.nome = nome;
         this.prezzoBase = prezzoBase;
-        this.ingredientiAggiuntivi = ingredientiAggiuntivi;
+        this.ingredienti = ingredienti;
     }
 
     public String getNome() {
@@ -31,11 +31,11 @@ public class Pizze {
     }
 
     public List<Ingredienti> getIngredientiAggiuntivi() {
-        return ingredientiAggiuntivi;
+        return ingredienti;
     }
 
-    public void setIngredientiAggiuntivi(List<Ingredienti> ingredientiAggiuntivi) {
-        this.ingredientiAggiuntivi = ingredientiAggiuntivi;
+    public void setIngredientiAggiuntivi(List<Ingredienti> ingredienti) {
+        this.ingredienti = ingredienti;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class Pizze {
         return "Pizze{" +
                 "nome='" + nome + '\'' +
                 ", prezzoBase=" + prezzoBase +
-                ", ingredientiAggiuntivi=" + ingredientiAggiuntivi +
+                ", ingredienti=" + ingredienti +
                 '}';
     }
 }
